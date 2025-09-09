@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café del Alma - Tu rincón de sabor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold font-playfair text-yellow-900">Café del Alma</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#menu" class="text-gray-600 hover:text-yellow-800 transition duration-300">Menú</a>
+                <a href="#nosotros" class="text-gray-600 hover:text-yellow-800 transition duration-300">Nosotros</a>
+                <a href="#contacto" class="text-gray-600 hover:text-yellow-800 transition duration-300">Contacto</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-yellow-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white">
+            <a href="#menu" class="block py-2 px-4 text-sm text-gray-600 hover:bg-yellow-50">Menú</a>
+            <a href="#nosotros" class="block py-2 px-4 text-sm text-gray-600 hover:bg-yellow-50">Nosotros</a>
+            <a href="#contacto" class="block py-2 px-4 text-sm text-gray-600 hover:bg-yellow-50">Contacto</a>
+        </div>
+    </nav>
+
+    <header class="relative h-screen bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=2071&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+            <h1 class="text-5xl md:text-7xl font-playfair mb-4">El arte de un buen café</h1>
+            <p class="text-lg md:text-xl max-w-2xl mb-8">Cada grano cuenta una historia. Ven y descubre la tuya en un ambiente cálido y acogedor.</p>
+            <a href="#menu" class="bg-yellow-800 hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">Ver nuestro menú</a>
+        </div>
+    </header>
+
+    <section id="menu" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-playfair text-center text-yellow-900 mb-12">Nuestro Menú</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1511920183353-309c135ebd58?q=80&w=1887&auto=format&fit=crop" alt="Espresso" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-yellow-900">Espresso Intenso</h3>
+                        <p class="text-gray-600 mb-4">Un shot concentrado de nuestro mejor grano, con notas a chocolate y avellana.</p>
+                        <span class="font-bold text-lg text-yellow-800">$2.50</span>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1572442388855-f73a0a389ade?q=80&w=1887&auto=format&fit=crop" alt="Cappuccino" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-yellow-900">Cappuccino Cremoso</h3>
+                        <p class="text-gray-600 mb-4">El equilibrio perfecto entre espresso, leche vaporizada y una capa de espuma.</p>
+                        <span class="font-bold text-lg text-yellow-800">$3.50</span>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1542990253-a7814533501a?q=80&w=1945&auto=format&fit=crop" alt="Croissant" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-yellow-900">Croissant de Mantequilla</h3>
+                        <p class="text-gray-600 mb-4">Recién horneado, hojaldrado y perfecto para acompañar cualquier bebida.</p>
+                        <span class="font-bold text-lg text-yellow-800">$2.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1528699536832-9a533b620154?q=80&w=1887&auto=format&fit=crop" alt="Interior de la cafetería" class="rounded-lg shadow-xl">
+            </div>
+            <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
+                <h2 class="text-4xl font-playfair text-yellow-900 mb-6">Nuestra Historia</h2>
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                    Café del Alma nació de una pasión compartida por el café de especialidad y el deseo de crear un espacio donde la comunidad pudiera reunirse, relajarse y disfrutar de momentos especiales. Desde 2023, hemos estado sirviendo con orgullo granos de origen único, tostados localmente para garantizar la máxima frescura y sabor en cada taza.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Creemos que una cafetería es más que un lugar para tomar café; es un punto de encuentro, un lugar de trabajo y un rincón de paz. ¡Te esperamos!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-yellow-900 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Café del Alma. Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:text-gray-300">Instagram</a>
+                <a href="#" class="hover:text-gray-300">Facebook</a>
+                <a href="#" class="hover:text-gray-300">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script para el menú móvil
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
+
